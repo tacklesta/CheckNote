@@ -16,7 +16,7 @@ app.use(express.static("public"));
 // const workItems = [];
 
 // USING MOONGOSE DATABASE
-mongoose.connect("mongodb+srv://admin-tarun:test321@cluster0.0dcml.mongodb.net/todoListDB",{useNewUrlParser: true});
+mongoose.connect("mongodb+srv://<>:<>@cluster0.0dcml.mongodb.net/todoListDB",{useNewUrlParser: true});
 
 const itemsSchema = mongoose.Schema({
   name:{
