@@ -11,6 +11,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+// setup
 mongoose.connect("mongodb+srv://<>:<>@cluster0.0dcml.mongodb.net/todoListDB",{useNewUrlParser: true});
 
 const itemsSchema = mongoose.Schema({
