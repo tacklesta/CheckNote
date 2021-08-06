@@ -1,4 +1,4 @@
-# CheckNote(2.0)
+# CheckNote(v2.0)
 
 CheckNote is a ToDo List Application with complete backend support. 
 
