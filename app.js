@@ -11,11 +11,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-//LOCALLY DOING THINGS
-// const items = ["Buy Food", "Cook Food", "Eat Food"];
-// const workItems = [];
-
-// USING MOONGOSE DATABASE
 mongoose.connect("mongodb+srv://<>:<>@cluster0.0dcml.mongodb.net/todoListDB",{useNewUrlParser: true});
 
 const itemsSchema = mongoose.Schema({
@@ -145,11 +140,8 @@ app.post('/delete',function(req,res){
   }
   else{
     List.findOneAndUpdate(
-      // condition
       {name: listName},
-      //update
       {$pull:{items:{_id:checkedItemID}}},
-      //callback
       function(err,foundList){
         if(!err)
         {
@@ -158,10 +150,6 @@ app.post('/delete',function(req,res){
       })
   }
 });
-
-// app.get("/work", function(req,res){
-//   res.render("list", {listTitle: "Work List", newListItems: workItems});
-// });
 
 app.get("/about", function(req, res){
   res.render("about");
